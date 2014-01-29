@@ -1,0 +1,72 @@
+# ---------------------
+# hltetmo
+cd device/samsung/hltetmo
+sleep 1
+git fetch https://github.com/willl0344/android_device_samsung_hltetmo.git
+sleep 1
+###Slimify cm.mk
+git cherry-pick 8d427b67a3d56515dc433000807c4cbaa45aec42
+sleep 1
+###Rename cm files to slim
+git cherry-pick 9f8b7477c3f2662b9975b937f11791d61fd41b96
+sleep 1
+###derp add new files 
+git cherry-pick 5ebaa588a1ce4208701eca30fba8be4798a4a8d9
+sleep 1
+###slimify dependecies
+git cherry-pick 8686ed9e005f5e526fa2f0d337c916f232e46c1d
+sleep 1
+###add missing comas
+git cherry-pick 3bf3029fbf4d9c1c1032fa0af28d1f8837a72ff5
+sleep 1
+###Use cm hardware_samsung
+git cherry-pick dfbbb320afb850756409558653dcaef660ba4a1f
+sleep 1
+###fix derp
+git cherry-pick dcf6832dd962d870828da5423b579fad30e2cf30
+sleep 1
+###Remove slim qcom dependencies
+git cherry-pick f882f6135b96fbbc27c58bbaf8b2a2457260d2dc
+sleep 1
+###Use Slim hardware_samsung
+git cherry-pick 7932daf2022812faf93d2cb9bcec05a2472115fa
+sleep 1
+###bring back slim display/audio/media-caf
+git cherry-pick 5d04f2b038200bffbd2a58234bf2a0d4352104e2
+sleep 1
+###Use slim msm8960-common
+git cherry-pick 460df54bc67e7ff0656e22198b8817ca6523f946
+sleep 1
+###Use slim qcom-common
+git cherry-pick 102c193f894a0fc94e7e3de66a5d009e3fad122a
+sleep 1
+croot
+sleep 1
+
+
+# ---------------------
+# hlte-common
+cd device/samsung/hlte-common
+sleep 1
+git fetch https://github.com/willl0344/android_device_samsung_hlte-common.git
+sleep 1
+###Remove CM overlays
+git cherry-pick 69f7e36bafc351f10fe4fea230a056e79ca2d207
+sleep 1
+###Add some slim overlays
+git cherry-pick aec083fe8aef7b1382f4dc1e881c52d4fbbc22b7
+sleep 1
+croot
+sleep 1
+
+#######TEMPLATE
+
+###
+git cherry-pick 
+sleep 1
+
+#######
+
+export USE_CCACHE=1
+sleep 1
+ccache -M 75
