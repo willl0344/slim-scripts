@@ -1,3 +1,5 @@
+source build/envsetup.sh
+
 # ---------------------
 # hltetmo
 cd device/samsung/hltetmo
